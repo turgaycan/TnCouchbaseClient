@@ -82,6 +82,7 @@ namespace TnCouchbaseClient
 
             return cachedValue;
         }
+
         public T Put<T>(string key, object value, Nullable<TimeSpan> timeToLive)
         {
             CheckKey(key);
@@ -156,6 +157,30 @@ namespace TnCouchbaseClient
             return result.Value;
         }
 
+        public bool Cas(string key)
+        {
+            CheckKey(key);
+
+            IOperationResult<object> casObject = bucket.Get<object>(key);
+
+            ulong casValue = casObject.Cas;
+
+            IOperationResult operationResult = bucket.Unlock(key, casValue);
+             
+            return operationResult.Status != ResponseStatus.Success;
+        }
+
+        public bool Increment(string key, Nullable<TimeSpan> timeToLive)
+        {
+            CheckKey(key);
+
+            TimeSpan ttl = GetTimeToLive(timeToLive);
+
+            IOperationResult<ulong> operationResult = bucket.Increment(key, 1, 1, ttl);
+
+            return operationResult.Success;
+        }
+
         private static TimeSpan GetTimeToLive(TimeSpan? timeToLive)
         {
             return (TimeSpan)((timeToLive == null || ((TimeSpan)timeToLive).TotalMilliseconds <= 1) ? defaultTimeSpan : timeToLive);
@@ -168,6 +193,7 @@ namespace TnCouchbaseClient
                 throw new ArgumentException(string.Format("Cache key : {0} length not appropriate, it must be min : {1} , max : {2}", key, MIN_KEY_LENGTH, MAX_KEY_LENGTH));
             }
         }
+        
         private IBucket Init(string bucketName)
         {
 

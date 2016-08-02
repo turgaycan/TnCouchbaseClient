@@ -20,5 +20,9 @@ namespace TnCouchbaseClient
         bool RemoveSafely(string key);
 
         object GetAndTouch(string key, Nullable<TimeSpan> timeToLive = null);
+
+        bool Cas(string key);
+
+        bool Increment(string key, Nullable<TimeSpan> timeToLive);
     }
 }
