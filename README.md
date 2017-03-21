@@ -18,17 +18,18 @@ To install .NET Couchbase caching template library for doing caching operations,
 
 #Prerequisites/Dependencies
 
-.NETFramework 4.5
-CouchbaseNetClient (>= 2.4.2)
-Newtonsoft.Json (>= 10.0.1)
-Jil (>= 2.15.0)
-Sigil (>= 4.7.0)
-log4net (>= 2.0.8)
-Common.Logging (>= 3.3.1)
-Common.Logging.Core (>= 3.3.1)
-Version History
-Version	Downloads	Last updated	Listed
-.NET Couchbase... 1.0.0 (this version)	0
+	.NETFramework 4.5
+
+	CouchbaseNetClient (>= 2.4.2)
+	Newtonsoft.Json (>= 10.0.1)
+	Jil (>= 2.15.0)
+	Sigil (>= 4.7.0)
+	log4net (>= 2.0.8)
+	Common.Logging (>= 3.3.1)
+	Common.Logging.Core (>= 3.3.1)
+	Version History
+	Version	Downloads	Last updated	Listed
+	.NET Couchbase... 1.0.0 (this version)	0
 
 #Code Examples
 
