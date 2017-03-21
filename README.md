@@ -8,15 +8,15 @@ The goal of project is to reduce code duplication, to make easier of code mainte
 
 ---
 
-#Getting Started
+# Getting Started
 
 Download from github repo : https://github.com/TurgayCan2/TnCouchbaseClient
 
 To install .NET Couchbase caching template library for doing caching operations, run the following command in the Package Manager Console
 
-#Install-Package TnCouchbaseClient
+# Install-Package TnCouchbaseClient
 
-#Prerequisites/Dependencies
+# Prerequisites/Dependencies
 
 	.NETFramework 4.5
 
@@ -31,7 +31,7 @@ To install .NET Couchbase caching template library for doing caching operations,
 	Version	Downloads	Last updated	Listed
 	.NET Couchbase... 1.0.0 (this version)	0
 
-#Code Examples
+# Code Examples
 
 You can downlaod couchbase cache server for developer/community/enterprise edition from -> https://www.couchbase.com/downloads
 
@@ -142,13 +142,13 @@ add xunit to project as nuget manager -> Install-Package xunit
     }
 	
 	
-#Versioning (Current 1.0.0)
+# Versioning (Current 1.0.0)
 
 Download from github repo : https://github.com/TurgayCan2/TnCouchbaseClient
 
-#Authors
+# Authors
 
 Turgay Can
 
-#Tags
+# Tags
 caching template .net couchbase
