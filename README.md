@@ -2,7 +2,9 @@
 # TnCouchbaseClient
 
 .NET Couchbase caching template... 1.0.0
+
 Simple way of Couchbase Caching Operations and Caching Template
+
 
 The goal of project is to reduce code duplication, to make easier of code maintenance and make central of caching operations
 
@@ -145,6 +147,8 @@ add xunit to project as nuget manager -> Install-Package xunit
 # Versioning (Current 1.0.0)
 
 Download from github repo : https://github.com/TurgayCan2/TnCouchbaseClient
+
+NuGet : https://nugetmusthaves.com/Package/TnCouchbaseClient
 
 # Authors
 
